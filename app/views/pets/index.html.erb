@@ -1,0 +1,19 @@
+<h1>All Lost Pets</h1>
+
+
+<ul class="list-group">
+  <% @pets.each do |pet| %>
+    <li class="list-group-item">
+      <%= pet.description %>
+      <%= link_to 'Ver Detalhes', pet_path(pet), class: 'btn btn-info' %>
+      <%= link_to 'Pet Found (Remove from list)', pet_path(pet), method: :delete, class: 'btn btn-danger' %>
+
+    </li>
+  <% end%>
+</ul>
+
+<p class="mt-5">
+  <%= link_to 'Inform about a lost pet', new_pet_path, class: 'btn btn-primary' %>
+</p>
+
+

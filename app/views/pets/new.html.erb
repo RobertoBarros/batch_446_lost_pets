@@ -1,0 +1,14 @@
+
+<div class="row justify-content-center">
+  <div class="col-6">
+    <h1 class="mb-5 mt-3"> Info about a new Pet </h1>
+
+    <%= simple_form_for(@pet) do |f| %>
+      <%= f.input :species, collection: ['Dog', 'Cat', 'Fish', 'Turtle'] %>
+      <%= f.input :description %>
+      <%= f.input :address %>
+      <%= f.submit class: 'btn btn-success btn-block' %>
+    <% end %>
+  </div>
+</div>
+

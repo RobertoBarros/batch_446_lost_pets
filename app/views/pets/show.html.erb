@@ -1,0 +1,23 @@
+<h1 class="mb-5">Info about <%= @pet.species %></h1>
+
+
+<p>
+  Description:
+  <%= @pet.description %>
+</p>
+<p>
+  Address:
+  <%= @pet.address %>
+</p>
+<p>
+  Found at:
+  <%= time_ago_in_words(@pet.created_at) %>
+</p>
+
+
+<p class="mt-5">
+  <%= link_to 'Ver Todos', pets_path, class: 'btn btn-primary' %>
+
+  <%= link_to 'Pet Found (Remove from list)', pet_path(@pet), method: :delete, class: 'btn btn-danger' %>
+</p>
+
